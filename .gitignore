@@ -17,3 +17,8 @@ db.sqlite3
 
 # Virtual environment
 venv/
+
+.idea/
+
+.clj-kondo/
+.lsp/

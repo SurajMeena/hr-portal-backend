@@ -1,0 +1,49 @@
+# NOTE: dummy file used for testing
+### GET request to example server
+GET http://127.0.0.1:8000/portal/new-hires
+
+### POST request to create a new hire
+POST http://127.0.0.1:8000/portal/new-hires/create
+Content-Type: application/json
+
+{
+  "first_name": "Suraj",
+  "last_name": "Meena",
+  "email": "suraj.meena@example.com",
+  "phone": "1234567890",
+  "start_date": "2023-11-01",
+  "username": "suraj_meena",
+  "password": "password",
+  "position": "HR"
+}
+
+### GET request to get tasks for a new hire
+GET http://127.0.0.1:8000/portal/new-hires/2/tasks
+
+### GET request to get all tasks
+GET http://127.0.0.1:8000/portal/tasks
+
+### POST request to create a new task
+POST http://127.0.0.1:8000/portal/tasks/create
+Content-Type: application/json
+
+{
+  "title": "Upload your Pan Card",
+  "description": "This is upload task",
+  "type": "file_upload"
+}
+
+
+### POST request to assign a task to new-hire
+POST http://127.0.0.1:8000/portal/tasks/assign
+Content-Type: application/json
+
+{
+  "task_id": 1,
+  "new_hire_id": 2,
+  "completion_date": "2024-11-01"
+}
+
+### GET request to get info for an employee
+GET http://127.0.0.1:8000/portal/new-hires/2
+Content-Type: application/json
